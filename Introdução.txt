@@ -1,0 +1,57 @@
+Android
+- Sistema Operacional para disponiveis móveis mantido pela Google desde 2005
+- Mais de 2,5 bilhões de usuários ativos
+- Presente em mais de 24 mil modelos de dispositivos diferentes
+- Automoveis e até espelhos
+
+Curiosidades
+- Android 3.0 (Versão exclusiva para tablet)
+- Visual caracteristico do android surgiu na versão ice cream sandwich
+- Mais de 2 milhões de apps publicados no google play
+- Brasil => 85% dos usuários afirmam que o primeiro smartphone foi um android
+
+Desenvolvimento Android
+=> Hibrido x Nativo
+   => Hibrido: escrever um codigo para rodar um em Android e outro no IOS (um código pode rodar em qualquer S.O)
+   => Nativo: escrever um código para gerar para um sistema especifico (Android)
+
+
+O que é Kotlin?
+- Criada pela JetBrains em 2011, mantida pela Kotlin foundation (parceria com o Google);
+- Linguagem multiplataforma, orientada a objetos e funcional;
+- Gratuito e código aberto;
+- Nome em homenagem a ilha russa, Kotlin
+
+Estrutura da Linguagem
+- Não utiliza ponto e virgula
+- Não possui operador ternario tradicional
+- Type safe e null safe (motivo pela grande adesão) evita erros de execução
+- Inferencia de tipos
+
+Aplicabilidade
+- Android nativo
+- Mobile multiplataforma (KMM)
+- Frontend web com kotlin/js
+- Frameworks ex: kvison e fritz2
+- Backend com target node.js do kotlin/js
+
+Vantagens kotlin
+- Segura, estruturada, menos verbosa, mais otimizada, grande relevancia no mercado
+- Interoperabilidade com o java; utilizar com a linguagem java e kotlin em uma aplicação, sem necessidade de imigrar a aplicação inteira para substituir para kotlin
+- Smart casts e null safety
+- Android é kotlin first
+
+Desvantagens
+- desempenho (um pouco mais lento)
+
+
+Kotlin + Android
+- 2016: primeira versão estavel do Kotlin Liberada
+- 2017: Google anuncia suporte a Kotlin para desenvolvimento em android
+- 2018: segunda linguagem preferida pelos desenvolvedores segundo stack overflow
+- 2019: Google anuncia que Kotlin é a nova linguagem oficial para desenvolvimento android
+(documentação, apps e tudo do google seria feito em Kotlin)
+
+E o Java?
+- java não é a prioridade mais para desenvolvimento;
+- java ainda é utiliza e depende da demanda
