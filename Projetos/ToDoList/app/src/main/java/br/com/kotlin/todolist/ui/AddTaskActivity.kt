@@ -70,7 +70,7 @@ class AddTaskActivity : AppCompatActivity() {
                 title = binding.tilTitle.text,
                 date = binding.tilDate.text,
                 hour = binding.tilHour.text,
-                id = intent.getInExtra(TASK_ID,0)
+                id = intent.getIntExtra(TASK_ID,0)
             )
             TaskDataSource.insertTask(task)
 

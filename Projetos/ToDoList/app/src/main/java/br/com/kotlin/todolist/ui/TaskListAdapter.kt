@@ -18,7 +18,7 @@ class TaskListAdapter :ListAdapter<Task,TaskListAdapter.TaskViewHolder>(DiffCall
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val binding = ItemTaskBinding.inflate(inflater,parent,false)
-        return TaskViewHolder()
+        return TaskViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: TaskViewHolder, position: Int) {
@@ -26,7 +26,7 @@ class TaskListAdapter :ListAdapter<Task,TaskListAdapter.TaskViewHolder>(DiffCall
     }
 
     inner class TaskViewHolder(private val binding:ItemTaskBinding) : RecyclerView.ViewHolder(binding.root){
-        fun bind(item: Task?) {
+        fun bind(item: Task) {
             binding.tvTitle.text = item.title
             binding.tvDate.text = "${item.date} ${item.hour}"
             binding.idMore.setOnClickListener {
@@ -34,7 +34,7 @@ class TaskListAdapter :ListAdapter<Task,TaskListAdapter.TaskViewHolder>(DiffCall
             }
         }
 
-        private fun showPopup() {
+        private fun showPopup(item: Task) {
             val idMore = binding.idMore
             val popupmenu = PopupMenu(idMore.context,idMore)
             popupmenu.menuInflater.inflate(R.menu.popupmenu,popupmenu.menu)
