@@ -1,5 +1,6 @@
 package br.com.kotlin.todolist.ui
 
+import android.app.Activity
 import android.nfc.Tag
 import android.os.Bundle
 import android.util.Log
@@ -62,6 +63,8 @@ class AddTaskActivity : AppCompatActivity() {
             )
             TaskDataSource.insertTask(task)
 
+            setResult(Activity.RESULT_OK)
+            finish()
         }
 
     }
