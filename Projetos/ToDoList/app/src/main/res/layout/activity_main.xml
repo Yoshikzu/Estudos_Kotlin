@@ -19,6 +19,7 @@
 
     <include
         android:id="@+id/include_empty"
+        android:visibility="gone"
         layout="@layout/empty_state" />
 
     <androidx.recyclerview.widget.RecyclerView

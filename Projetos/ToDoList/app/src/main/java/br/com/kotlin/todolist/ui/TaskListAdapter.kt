@@ -1,6 +1,9 @@
 package br.com.kotlin.todolist.ui
 
+import android.annotation.SuppressLint
+import android.util.Log
 import android.view.LayoutInflater
+import android.view.ViewDebug
 import android.view.ViewGroup
 import android.widget.PopupMenu
 import androidx.recyclerview.widget.DiffUtil
@@ -26,12 +29,14 @@ class TaskListAdapter :ListAdapter<Task,TaskListAdapter.TaskViewHolder>(DiffCall
     }
 
     inner class TaskViewHolder(private val binding:ItemTaskBinding) : RecyclerView.ViewHolder(binding.root){
+
         fun bind(item: Task) {
             binding.tvTitle.text = item.title
             binding.tvDate.text = "${item.date} ${item.hour}"
             binding.idMore.setOnClickListener {
                 showPopup(item)
             }
+
         }
 
         private fun showPopup(item: Task) {
@@ -54,7 +59,6 @@ class TaskListAdapter :ListAdapter<Task,TaskListAdapter.TaskViewHolder>(DiffCall
 }
 
 class DiffCallback : DiffUtil.ItemCallback<Task>(){
-
     override fun areItemsTheSame(oldItem: Task, newItem: Task) = oldItem == newItem
     override fun areContentsTheSame(oldItem: Task, newItem: Task) = oldItem.id == newItem.id
 }

@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
     )
     { result ->
         if (result.resultCode == Activity.RESULT_OK) {
+            recreate()
             updateList()
         }
     }
@@ -45,8 +46,8 @@ class MainActivity : AppCompatActivity() {
         adapter.listenerEdit = {
             val intent = Intent(this,AddTaskActivity::class.java)
             intent.putExtra(AddTaskActivity.TASK_ID,it.id)
-            //startActivityForResult(intent,CREATE_NEW_TASK)
             startForResult.launch(intent)
+
         }
 
         adapter.listenerDelete = {
@@ -55,21 +56,17 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == CREATE_NEW_TASK && resultCode == Activity.RESULT_OK){
-            updateList()
-        }
-    }
-
     private fun updateList(){
-        val list = TaskDataSource.getList()
-        binding.includeEmpty.emptyState.visibility = if (list.isEmpty()){
-            View.VISIBLE
-        }else{
-            View.GONE
-        }
+        var list = TaskDataSource.getList()
+
+        binding.includeEmpty.emptyState.visibility =
+            if (list.isEmpty()) View.VISIBLE else View.GONE
+
+        binding.rvTasks.visibility =
+            if (list.isNotEmpty()) View.VISIBLE else View.GONE
+
         adapter.submitList(list)
+        //adapter.notifyDataSetChanged()
     }
 
     companion object{

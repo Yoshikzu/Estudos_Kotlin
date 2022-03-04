@@ -73,7 +73,6 @@ class AddTaskActivity : AppCompatActivity() {
                 id = intent.getIntExtra(TASK_ID,0)
             )
             TaskDataSource.insertTask(task)
-
             setResult(Activity.RESULT_OK)
             finish()
         }
