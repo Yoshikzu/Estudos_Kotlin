@@ -1,9 +1,11 @@
 package br.com.kotlin.todolist.ui
 
 import android.app.Activity
+import android.app.AlertDialog
 import android.nfc.Tag
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import br.com.kotlin.todolist.databinding.ActivityAddTaskBinding
 import br.com.kotlin.todolist.datasource.TaskDataSource
@@ -72,15 +74,38 @@ class AddTaskActivity : AppCompatActivity() {
                 hour = binding.tilHour.text,
                 id = intent.getIntExtra(TASK_ID,0)
             )
-            TaskDataSource.insertTask(task)
-            setResult(Activity.RESULT_OK)
-            finish()
+            if (validate_fields()){
+                TaskDataSource.insertTask(task)
+                setResult(Activity.RESULT_OK)
+                finish()
+            }
         }
-
     }
 
     companion object{
         const val TASK_ID = "task_id"
+    }
+
+    private fun validate_fields(): Boolean  {
+        val msg = AlertDialog.Builder(this)
+        msg.setTitle("Atenção")
+        if (binding.tilTitle.text.isBlank() || binding.tilTitle.text.isEmpty()){
+            msg.setMessage("Preencha o Título")
+            msg.show()
+            return false
+        }
+
+        if(binding.tilDate.text.isBlank() || binding.tilDate.text.isEmpty()){
+            msg.setMessage("Preencha a Data")
+            msg.show()
+            return false
+        }
+        if(binding.tilHour.text.isBlank() || binding.tilHour.text.isEmpty()){
+            msg.setMessage("Preencha a Hora")
+            msg.show()
+            return false
+        }
+        return true
     }
 
 }

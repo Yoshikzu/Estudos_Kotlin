@@ -34,8 +34,6 @@ class MainActivity : AppCompatActivity() {
         binding.rvTasks.adapter = adapter
         updateList()
         insertListeners()
-        //DATA SOURCE
-        //ROOM
     }
 
     private fun insertListeners(){
@@ -54,19 +52,18 @@ class MainActivity : AppCompatActivity() {
             TaskDataSource.deleteTask(it)
             updateList()
         }
+
     }
 
     private fun updateList(){
         var list = TaskDataSource.getList()
-
         binding.includeEmpty.emptyState.visibility =
             if (list.isEmpty()) View.VISIBLE else View.GONE
 
         binding.rvTasks.visibility =
             if (list.isNotEmpty()) View.VISIBLE else View.GONE
 
-        adapter.submitList(list)
-        //adapter.notifyDataSetChanged()
+        adapter.submitList(list.sortedBy { it.date }.sortedBy { it.hour })
     }
 
     companion object{
