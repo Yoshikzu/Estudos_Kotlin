@@ -1,0 +1,37 @@
+ViewGroup 
+=> um contêiner em que objetos View podem ficar
+=> responsável por organizar as Views dentro de si
+=> ConstraintLayout é um tipo de ViewGroup
+
+medida dp => equivalente a 1/160 de uma polegada (pixel de densidade independente) 
+=> utilizado para layout
+
+medida sp => tamanho da fonte (epixels escalonaveis)
+=> utilizado para tamanho de texto
+
+Por padrão, um sp é do mesmo tamanho que um dp, mas é redimensionado com base no tamanho de texto preferencial do usuário.
+
+
+
+=> O Layout Editor ajuda a criar a IU para seu app Android.
+=> Quase tudo o que você vê na tela do seu app é uma View.
+=> Uma TextView é um elemento da IU para exibir texto no app.
+=> Um ConstraintLayout é um contêiner para outros elementos de IU.
+=> As Views precisam ter restrições horizontais e verticais em um ConstraintLayout.
+=> Uma View pode ser posicionada usando uma margem.
+=> A margem determina a distância entre uma View e a borda do contêiner em que ela está.
+=> Você pode definir atributos em uma TextView, como fonte, tamanho do texto e cor.
+
+
+
+layout_width => 0dp (match constraint)
+"match constraints" significa que… Devido às restrições que você acabou de adicionar, a largura da visualização será igual à do ConstraintLayout, menos as margens.
+
+layout_height como 0dp (match constraint). Devido às restrições que você adicionou, a altura da ImageView será igual à do ConstraintLayout, menos as margens
+
+
+
+=> O Resource Manager no Android Studio ajuda você a adicionar e organizar suas imagens e outros recursos.
+=> Uma ImageView é um elemento de IU para exibir imagens no app.
+=> As ImageViews precisam ter uma descrição do conteúdo para tornar o app mais acessível.
+=> O texto que é exibido ao usuário, como a mensagem de aniversário, precisa ser extraído para um recurso de string de modo a facilitar a tradução do app para outros idiomas.

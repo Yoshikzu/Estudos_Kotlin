@@ -1,0 +1,8 @@
+Ao criar o projeto pelo android Studio, na pasta src são criados dois pacotes: AndroidTest e Test
+
+=> Test => Geralmente testes de unidade
+Os testes locais são executados na máquina virtual Java, ou seja, são executados em um ambiente de desenvolvimento sem a necessidade de um dispositivo ou emulado
+O Android Studio já vem pronto para executar testes locais automaticamente
+
+=> AndroidTeste => Teste de Instrumentação (Teste de Interface)
+Esses testes precisam ser testados em um emulador ou dispositivo movel
