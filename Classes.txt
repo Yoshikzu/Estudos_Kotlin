@@ -1,7 +1,8 @@
-=> Chame a função random() em um IntRange para gerar um número aleatório: (1..6).random()
-=> As classes são como o modelo de um objeto. Elas podem ter propriedades e comportamentos, implementados como variáveis e funções.
-=> A instância de uma classe representa um objeto, geralmente um objeto físico, como um dado. É possível chamar as ações no objeto e mudar os atributos.
-=> É possível fornecer valores para uma classe ao criar uma instância. Por exemplo: class Dice(val numSides: Int) e, então, criar uma instância com Dice(6).
-=> As funções podem retornar algo. Especifique o tipo de dados a ser retornado na definição da função e use uma instrução return no corpo da função para retornar algo. Por exemplo: fun example(): Int { return 5 }
-
-
+=> Hierarquia de classes é uma árvore de classes em que as classes filhas herdam a funcionalidade das classes pai. Propriedades e funções são herdadas por subclasses;
+criar uma classe abstract em que algumas funcionalidades podem ser implementados pelas subclasses. 
+*uma classe abstract não pode ser instanciada;
+=> a palavra-chave override para modificar propriedades e funções em subclasses;
+=> a palavra-chave super para referenciar funções e propriedades na classe pai;
+=> uma classe open => permite que uma subclasse possa herdar dela
+=> uma propriedade private, só pode ser usada dentro da classe;
+=> a construção with permite fazer várias chamadas na mesma instância do objeto

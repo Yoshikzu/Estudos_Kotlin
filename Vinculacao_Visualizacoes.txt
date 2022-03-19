@@ -1,0 +1,27 @@
+=> Deverá incluir no arquivo Build.gradle (Module) dentro de Android 
+    buildFeatures {
+        viewBinding = true
+    }
+para que possa utilizar a vinculação de visualizações.. criando somente um objeto para view.. e não acessando findViewById(R.id.nome_campo)
+
+e na Classe Activity deverá criar uma variavel 
+lateinit var binding: ActivityMainBinding
+
+e na função onCreate incluir essa linha
+  binding = ActivityMainBinding.inflate(layoutInflater)
+
+Exemplo:
+class MainActivity : AppCompatActivity() {
+
+    lateinit var binding: ActivityMainBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+    }
+}
+
+A palavra-chave lateinit é nova. Ela é uma promessa de que seu código inicializará a variável antes de usá-la. Se você não fizer isso, o app falhará
+
+

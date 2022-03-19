@@ -1,0 +1,7 @@
+=> Chame a função random() em um IntRange para gerar um número aleatório: (1..6).random()
+=> As classes são como o modelo de um objeto. Elas podem ter propriedades e comportamentos, implementados como variáveis e funções.
+=> A instância de uma classe representa um objeto, geralmente um objeto físico, como um dado. É possível chamar as ações no objeto e mudar os atributos.
+=> É possível fornecer valores para uma classe ao criar uma instância. Por exemplo: class Dice(val numSides: Int) e, então, criar uma instância com Dice(6).
+=> As funções podem retornar algo. Especifique o tipo de dados a ser retornado na definição da função e use uma instrução return no corpo da função para retornar algo. Por exemplo: fun example(): Int { return 5 }
+
+
