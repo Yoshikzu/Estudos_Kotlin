@@ -1,0 +1,1 @@
+=> Recomendamos usar tons mais claros (200 a 50) em um tema escuro, em vez do tema de cores padrão (tons de saturação de 900 a 500)
