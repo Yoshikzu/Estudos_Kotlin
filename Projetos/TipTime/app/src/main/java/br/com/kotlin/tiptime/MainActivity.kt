@@ -29,7 +29,6 @@ class MainActivity : AppCompatActivity() {
         val cost = binding.costOfServiceEditText.text.toString().toDoubleOrNull()
         if (cost == null || cost == 0.00){
             displayTip(0.00)
-            //binding.tipResult.text = ""
             return
         }
         val tipPercentage = when(binding.tipOptions.checkedRadioButtonId){
@@ -46,7 +45,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun displayTip(tip : Double) {
         val formattedTip = NumberFormat.getCurrencyInstance().format(tip)
-        binding.tipResult.text = getString(R.string.tip_amount, formattedTip)
+        binding.tipResult.text = String.format(getString(R.string.tip_amount, formattedTip))
     }
 
     private fun handleKeyEvent(view: View, keyCode: Int): Boolean {
