@@ -1,0 +1,12 @@
+RecyclerView
+
+=> O widget RecyclerView ajuda a exibir uma lista de dados.
+=> O RecyclerView usa o padrão do adaptador para adaptar e exibir os dados.
+=> O ViewHolder cria e armazena as visualizações para o RecyclerView.
+=> O RecyclerView vem com um LayoutManagers integrado. O RecyclerView delega como os itens são dispostos no LayoutManagers.
+
+Para implementar o adaptador:
+=> Crie uma nova classe para o adaptador, por exemplo, ItemAdapter
+=> Crie uma classe ViewHolder personalizada que represente uma única visualização do item da lista. Estenda-a da classe RecyclerView.ViewHolder.
+=> Modifique a classe ItemAdapter para ser estendida da classe RecyclerView.Adapter com a classe ViewHolder personalizada.
+=> Implemente estes métodos no adaptador: getItemsCount(), onCreateViewHolder() e onBindViewHolder().

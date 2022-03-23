@@ -1,0 +1,11 @@
+
+Observação: é possível usar val para uma lista mutável, porque a variável entrees contém uma referência à lista e essa referência não muda mesmo que o conteúdo da lista mude.
+
+
+O modificador vararg permite que você transmita um número variável de argumentos para uma função ou um construtor.
+
+Exemplo:
+
+class Vegetables(vararg val toppings: String) : Item("Vegetables", 5) {
+ 
+}
