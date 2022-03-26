@@ -1,0 +1,2 @@
+AdoptOpenJDK
+=> Versão livre do JDK (versão gratuita do JDK)
