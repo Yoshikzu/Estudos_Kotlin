@@ -1,11 +1,8 @@
-package br.com.kotlin.todolist.ui
+package br.com.kotlin.todolist.view
 
 import android.app.Activity
 import android.app.AlertDialog
-import android.nfc.Tag
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import br.com.kotlin.todolist.databinding.ActivityAddTaskBinding
 import br.com.kotlin.todolist.datasource.TaskDataSource
@@ -16,7 +13,6 @@ import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.timepicker.MaterialTimePicker
 import com.google.android.material.timepicker.TimeFormat
 import java.util.*
-import kotlin.concurrent.timer
 
 class AddTaskActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAddTaskBinding

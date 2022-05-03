@@ -1,9 +1,6 @@
-package br.com.kotlin.todolist.ui
+package br.com.kotlin.todolist.view
 
-import android.annotation.SuppressLint
-import android.util.Log
 import android.view.LayoutInflater
-import android.view.ViewDebug
 import android.view.ViewGroup
 import android.widget.PopupMenu
 import androidx.recyclerview.widget.DiffUtil

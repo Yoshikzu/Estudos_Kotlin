@@ -1,15 +1,11 @@
-package br.com.kotlin.todolist.ui
+package br.com.kotlin.todolist.view
 
 import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.widget.Toast
-import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
-import br.com.kotlin.todolist.R
 import br.com.kotlin.todolist.databinding.ActivityMainBinding
 import br.com.kotlin.todolist.datasource.TaskDataSource
 
@@ -36,6 +32,11 @@ class MainActivity : AppCompatActivity() {
         insertListeners()
     }
 
+    override fun onResume() {
+        super.onResume()
+        updateList()
+    }
+
     private fun insertListeners(){
         binding.includeTask.setOnClickListener {
             val createTaskIntent = Intent(this, AddTaskActivity::class.java)
@@ -45,7 +46,6 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this,AddTaskActivity::class.java)
             intent.putExtra(AddTaskActivity.TASK_ID,it.id)
             startForResult.launch(intent)
-
         }
 
         adapter.listenerDelete = {
